@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntoniousAdel | Azure Data Engineer Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background-color: #0369a1;
+            color: #e0f2fe;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-category {
+            background-color: var(--card-bg);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-category h3 {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .skill-category li::before {
+            content: "▹ ";
+            color: var(--accent-color);
+        }
+
+        /* Projects Section */
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card h3 {
+            color: var(--accent-color);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-tech {
+            font-size: 0.85rem;
+            color: #38bdf8;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card ul {
+            list-style-position: inside;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+
+        .service-card h3 {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .contact-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--accent-color);
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .contact-link:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>[Your Full Name]</h1>
+        <p class="tagline">Microsoft Azure Data Engineer | DEPI Specialist</p>
+        <p class="tagline" style="font-size: 0.95rem; margin-bottom: 1rem;">Bridging engineering precision with Microsoft Azure expertise to build automated, AI-ready data pipelines and scalable cloud data solutions.</p>
+        <div class="badges">
+            <span class="badge">DEPI Scholar</span>
+            <span class="badge">B.Eng. Communication & Electronics</span>
+            <span class="badge">Azure Data Engineer</span>
+        </div>
+    </header>
+
+    <!-- 1. SKILLS SECTION -->
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Cloud Architecture</h3>
+                <ul>
+                    <li>Microsoft Azure</li>
+                    <li>Azure Data Factory (ADF)</li>
+                    <li>Azure Synapse Analytics</li>
+                    <li>Azure Blob Storage & Data Lake</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Data Engineering & DB</h3>
+                <ul>
+                    <li>Advanced SQL Querying</li>
+                    <li>Relational DB Management</li>
+                    <li>ETL / ELT Data Pipelines</li>
+                    <li>Big Data Processing</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Programming & DevOps</h3>
+                <ul>
+                    <li>Advanced Python</li>
+                    <li>Prompt Engineering (AI)</li>
+                    <li>Azure DevOps & Git</li>
+                    <li>Data Pipeline Automation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PREVIOUS PROJECTS SECTION -->
+    <section>
+        <h2>Featured Projects</h2>
+
+        <div class="project-card">
+            <h3>1. End-to-End Automated ETL Pipeline on Azure</h3>
+            <p class="project-tech">Azure Data Factory | Azure Blob Storage | Azure SQL | Python | SQL</p>
+            <p>Designed and deployed an automated cloud pipeline to ingest, clean, and consolidate raw retail sales data into a centralized analytical database.</p>
+            <ul>
+                <li>Automated daily API and flat file data ingestion into Azure Data Lake.</li>
+                <li>Wrote custom Python scripts to clean unstructured data and validate formats.</li>
+                <li>Scheduled nightly pipeline triggers with error alerting in Azure Monitor.</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <h3>2. Database Optimization & Big Data Processing</h3>
+            <p class="project-tech">Advanced SQL | Star Schema | Indexing & Partitioning | Query Tuning</p>
+            <p>Re-architected an unoptimized relational database to speed up analytical queries and reduce backend cloud computing costs.</p>
+            <ul>
+                <li>Converted transactional schemas into an optimized analytical Star Schema.</li>
+                <li>Applied clustered indexing and table partitioning on multi-million row datasets.</li>
+                <li>Reduced query response times from 4 minutes to under 15 seconds.</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <h3>3. AI-Enhanced Data Validation Workflow</h3>
+            <p class="project-tech">Python | Prompt Engineering | AI Tools | Azure DevOps</p>
+            <p>Built a pre-processing pipeline using Prompt Engineering to automatically categorize and sanitize unstructured customer feedback logs.</p>
+            <ul>
+                <li>Integrated LLM APIs into Python ingestion workflows for text classification.</li>
+                <li>Created automated quarantine logic for records requiring manual review.</li>
+                <li>Managed project updates and code repositories using Azure DevOps.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES YOU OFFER SECTION -->
+    <section>
+        <h2>Services Offered</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>ETL/ELT Pipeline Development</h3>
+                <p>Building scalable, scheduled, and error-monitored automated data ingestion pipelines on Microsoft Azure.</p>
+            </div>
+            <div class="service-card">
+                <h3>Database Design & SQL Optimization</h3>
+                <p>Designing relational database schemas, refactoring slow SQL queries, and optimizing table performance.</p>
+            </div>
+            <div class="service-card">
+                <h3>Azure Cloud Infrastructure Setup</h3>
+                <p>Configuring Azure Blob Storage, Data Factory, and Azure SQL DB for enterprise cloud architecture.</p>
+            </div>
+            <div class="service-card">
+                <h3>Data Cleaning & Preprocessing</h3>
+                <p>Transforming raw, messy, or unstructured datasets into structured, ready-to-analyze data models.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CONTACT INFORMATION SECTION -->
+    <section>
+        <h2>Contact Information</h2>
+        <div class="contact-box">
+            <p>I am available for freelance projects, technical consultation, and cloud data engineering contracts.</p>
+            <div class="contact-links">
+                <a href="mailto:antoniousadle15@gmail.com" class="contact-link">📧 antoniousadle15@gmail.com</a>
+                <a href="[Your LinkedIn Profile Link]" target="_blank" class="contact-link">🔗 LinkedIn Profile</a>
+                <a href="[Your GitHub Profile Link]" target="_blank" class="contact-link">💻 GitHub Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 AntoniousAdel | Digital Egypt Pioneers Initiative (DEPI) Microsoft Data Engineer</p>
+    </footer>
+</div>
+
+</body>
+</html>
