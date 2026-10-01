@@ -45,8 +45,5 @@ Here are the key projects, assignments, and case studies developed during the DE
 ## 📁 Portfolio Structure
 
 ```text
-├── 01_python_basics/       # Practice scripts and fundamental exercises
-├── 02_eda_projects/        # Exploratory Data Analysis notebooks & visual reports
-├── 03_sql_queries/         # Database schemas and analytical SQL scripts
-├── 04_ml_models/           # Machine Learning notebooks, datasets, and saved models
+├── portfolio.html           
 └── README.md               # Portfolio overview & DEPI task submission
