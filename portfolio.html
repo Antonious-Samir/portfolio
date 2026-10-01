@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AntoniousAdel | Azure Data Engineer Portfolio</title>
+    <title>Antonious Adel Samir | The Data Consigliere</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --accent-color: #38bdf8;
-            --text-color: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: #334155;
+            --bg-color: #f4efe6;         
+            --card-bg: #fcfbfa;          
+            --text-main: #2b1d14;        
+            --text-muted: #594a3e;       
+            --accent-red: #721c1c;       
+            --border-color: #4a3424;     
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-color);
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); 
+            color: var(--text-main);
+            font-family: 'Lora', serif;
             line-height: 1.6;
             padding: 2rem 1rem;
         }
@@ -33,72 +35,99 @@
             margin: 0 auto;
         }
 
+        /* --- HEADER --- */
         header {
             text-align: center;
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 2rem;
+            padding: 3rem 0;
+            border-bottom: 3px double var(--border-color);
+            margin-bottom: 2.5rem;
         }
 
         h1 {
-            font-size: 2.5rem;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--text-main);
+            margin-bottom: 0.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .tagline {
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--accent-red);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .quote {
             font-size: 1.1rem;
-            color: var(--text-muted);
-            max-width: 700px;
+            color: var(--text-main);
+            max-width: 600px;
             margin: 0 auto 1.5rem auto;
+            font-weight: 600;
+        }
+
+        .quote::before, .quote::after {
+            content: '"';
+            color: var(--accent-red);
         }
 
         .badges {
             display: flex;
             justify-content: center;
-            gap: 0.5rem;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
         .badge {
-            background-color: #0369a1;
-            color: #e0f2fe;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.3rem 1rem;
+            border-radius: 2px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            background-color: #eae1d1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         section {
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
         }
 
         h2 {
-            font-size: 1.75rem;
-            border-bottom: 2px solid var(--accent-color);
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--accent-red);
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
             padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-color);
+            margin-bottom: 2rem;
+            position: relative;
         }
 
-        /* Skills Section */
+        /* --- SKILLS SECTION --- */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .skill-category {
             background-color: var(--card-bg);
-            padding: 1.25rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border: 2px solid var(--border-color);
+            box-shadow: 4px 4px 0px rgba(74, 52, 36, 0.1);
         }
 
         .skill-category h3 {
-            color: var(--accent-color);
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--text-main);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 0.5rem;
         }
 
         .skill-category ul {
@@ -107,81 +136,90 @@
 
         .skill-category li {
             color: var(--text-muted);
-            margin-bottom: 0.4rem;
-            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
         }
 
         .skill-category li::before {
-            content: "▹ ";
-            color: var(--accent-color);
+            content: "❖ ";
+            color: var(--accent-red);
+            font-size: 0.8rem;
         }
 
-        /* Projects Section */
+        /* --- PROJECTS SECTION --- */
         .project-card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
+            border: 2px solid var(--border-color);
+            padding: 2rem;
             margin-bottom: 1.5rem;
+            box-shadow: 4px 4px 0px rgba(74, 52, 36, 0.1);
         }
 
         .project-card h3 {
-            color: var(--accent-color);
-            font-size: 1.25rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-red);
+            font-size: 1.5rem;
             margin-bottom: 0.5rem;
         }
 
         .project-tech {
-            font-size: 0.85rem;
-            color: #38bdf8;
-            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .project-card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
         }
 
         .project-card ul {
             list-style-position: inside;
             color: var(--text-muted);
-            font-size: 0.9rem;
+            margin-left: 1rem;
         }
 
-        /* Services Section */
+        /* --- SERVICES SECTION --- */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .service-card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.25rem;
+            border: 2px solid var(--border-color);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 4px 4px 0px rgba(74, 52, 36, 0.1);
         }
 
         .service-card h3 {
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
         }
 
         .service-card p {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
 
-        /* Contact Section */
+        /* --- CONTACT SECTION --- */
         .contact-box {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
+            border: 3px double var(--border-color);
+            padding: 2.5rem;
             text-align: center;
+        }
+
+        .contact-box p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
         }
 
         .contact-links {
@@ -189,31 +227,35 @@
             justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
-            margin-top: 1rem;
         }
 
         .contact-link {
-            color: var(--accent-color);
+            font-family: 'Playfair Display', serif;
+            color: var(--card-bg);
+            background-color: var(--accent-red);
             text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--accent-color);
-            border-radius: 6px;
-            transition: all 0.2s ease;
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--accent-red);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .contact-link:hover {
-            background-color: var(--accent-color);
-            color: var(--bg-color);
+            background-color: var(--card-bg);
+            color: var(--accent-red);
         }
 
         footer {
             text-align: center;
             color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-top: 3rem;
+            font-size: 0.9rem;
+            margin-top: 4rem;
             border-top: 1px solid var(--border-color);
-            padding-top: 1.5rem;
+            padding-top: 2rem;
+            font-family: 'Playfair Display', serif;
         }
     </style>
 </head>
@@ -221,126 +263,122 @@
 
 <div class="container">
     <header>
-        <h1>[Your Full Name]</h1>
-        <p class="tagline">Microsoft Azure Data Engineer | DEPI Specialist</p>
-        <p class="tagline" style="font-size: 0.95rem; margin-bottom: 1rem;">Bridging engineering precision with Microsoft Azure expertise to build automated, AI-ready data pipelines and scalable cloud data solutions.</p>
+        <h1>Antonious Adel Samir</h1>
+        <p class="subtitle">The Data Consigliere to the Digital Family</p>
+        <p class="quote">I'll make you an offer on automated data pipelines you can't refuse.</p>
         <div class="badges">
             <span class="badge">DEPI Scholar</span>
-            <span class="badge">B.Eng. Communication & Electronics</span>
             <span class="badge">Azure Data Engineer</span>
+            <span class="badge">B.Eng. Comm & Electronics</span>
         </div>
     </header>
 
     <!-- 1. SKILLS SECTION -->
     <section>
-        <h2>Technical Skills</h2>
+        <h2>Skills of the Family</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h3>Cloud Architecture</h3>
+                <h3>Cloud Territory</h3>
                 <ul>
-                    <li>Microsoft Azure</li>
+                    <li>Microsoft Azure Infrastructure</li>
                     <li>Azure Data Factory (ADF)</li>
                     <li>Azure Synapse Analytics</li>
-                    <li>Azure Blob Storage & Data Lake</li>
+                    <li>Blob Storage & Data Lakes</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <h3>Data Engineering & DB</h3>
+                <h3>The Vault (Databases)</h3>
                 <ul>
                     <li>Advanced SQL Querying</li>
-                    <li>Relational DB Management</li>
-                    <li>ETL / ELT Data Pipelines</li>
+                    <li>Relational Database Management</li>
                     <li>Big Data Processing</li>
+                    <li>Data Cleaning & Structuring</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <h3>Programming & DevOps</h3>
+                <h3>Operations (DevOps)</h3>
                 <ul>
-                    <li>Advanced Python</li>
+                    <li>Advanced Python Scripts</li>
                     <li>Prompt Engineering (AI)</li>
                     <li>Azure DevOps & Git</li>
-                    <li>Data Pipeline Automation</li>
+                    <li>Automated ETL/ELT Pipelines</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- 2. PREVIOUS PROJECTS SECTION -->
+    <!-- 2. PROJECTS SECTION -->
     <section>
-        <h2>Featured Projects</h2>
+        <h2>Projects of Respect</h2>
 
         <div class="project-card">
-            <h3>1. End-to-End Automated ETL Pipeline on Azure</h3>
-            <p class="project-tech">Azure Data Factory | Azure Blob Storage | Azure SQL | Python | SQL</p>
-            <p>Designed and deployed an automated cloud pipeline to ingest, clean, and consolidate raw retail sales data into a centralized analytical database.</p>
+            <h3>1. End-to-End Automated ETL Pipeline</h3>
+            <p class="project-tech">Azure Data Factory | Blob Storage | Azure SQL | Python</p>
+            <p>Took control of fragmented business data, orchestrating a fully automated cloud pipeline to clean and consolidate raw sales numbers into a centralized database.</p>
             <ul>
-                <li>Automated daily API and flat file data ingestion into Azure Data Lake.</li>
-                <li>Wrote custom Python scripts to clean unstructured data and validate formats.</li>
-                <li>Scheduled nightly pipeline triggers with error alerting in Azure Monitor.</li>
+                <li>Automated daily API and legacy file ingestion into the Azure Bronze layer.</li>
+                <li>Wrote custom Python scripts to enforce data integrity and eliminate missing values.</li>
+                <li>Scheduled nightly triggers that run silently in the background with strict error monitoring.</li>
             </ul>
         </div>
 
         <div class="project-card">
             <h3>2. Database Optimization & Big Data Processing</h3>
-            <p class="project-tech">Advanced SQL | Star Schema | Indexing & Partitioning | Query Tuning</p>
-            <p>Re-architected an unoptimized relational database to speed up analytical queries and reduce backend cloud computing costs.</p>
+            <p class="project-tech">Advanced SQL | Star Schema | Indexing</p>
+            <p>Restructured a bloated, slow-moving database into a highly efficient, streamlined analytics engine, saving the business time and computing resources.</p>
             <ul>
-                <li>Converted transactional schemas into an optimized analytical Star Schema.</li>
-                <li>Applied clustered indexing and table partitioning on multi-million row datasets.</li>
-                <li>Reduced query response times from 4 minutes to under 15 seconds.</li>
+                <li>Re-architected transactional schemas into a reporting-optimized Star Schema.</li>
+                <li>Applied strategic indexing on high-traffic queries to drastically reduce read times.</li>
+                <li>Cut query response times from 4 minutes to under 15 seconds.</li>
             </ul>
         </div>
 
         <div class="project-card">
-            <h3>3. AI-Enhanced Data Validation Workflow</h3>
-            <p class="project-tech">Python | Prompt Engineering | AI Tools | Azure DevOps</p>
-            <p>Built a pre-processing pipeline using Prompt Engineering to automatically categorize and sanitize unstructured customer feedback logs.</p>
+            <h3>3. AI-Enhanced Validation Workflow</h3>
+            <p class="project-tech">Python | Prompt Engineering | Azure DevOps</p>
+            <p>Brought artificial intelligence into the family business. Built a pre-processing pipeline to automatically read, categorize, and clean unstructured logs.</p>
             <ul>
-                <li>Integrated LLM APIs into Python ingestion workflows for text classification.</li>
-                <li>Created automated quarantine logic for records requiring manual review.</li>
-                <li>Managed project updates and code repositories using Azure DevOps.</li>
+                <li>Integrated LLM APIs for automated sentiment and category tagging.</li>
+                <li>Built quarantine logic to isolate suspicious or low-confidence records for human review.</li>
             </ul>
         </div>
     </section>
 
-    <!-- 3. SERVICES YOU OFFER SECTION -->
+    <!-- 3. SERVICES SECTION -->
     <section>
-        <h2>Services Offered</h2>
+        <h2>Services Offered to the Business World</h2>
         <div class="services-grid">
             <div class="service-card">
-                <h3>ETL/ELT Pipeline Development</h3>
-                <p>Building scalable, scheduled, and error-monitored automated data ingestion pipelines on Microsoft Azure.</p>
+                <h3>Pipeline Orchestration</h3>
+                <p>Building reliable, scheduled data ingestion pathways (ETL/ELT) that never miss a deadline.</p>
             </div>
             <div class="service-card">
-                <h3>Database Design & SQL Optimization</h3>
-                <p>Designing relational database schemas, refactoring slow SQL queries, and optimizing table performance.</p>
+                <h3>Database Optimization</h3>
+                <p>Cleaning up slow queries and poorly structured tables to make your data lightning fast.</p>
             </div>
             <div class="service-card">
-                <h3>Azure Cloud Infrastructure Setup</h3>
-                <p>Configuring Azure Blob Storage, Data Factory, and Azure SQL DB for enterprise cloud architecture.</p>
-            </div>
-            <div class="service-card">
-                <h3>Data Cleaning & Preprocessing</h3>
-                <p>Transforming raw, messy, or unstructured datasets into structured, ready-to-analyze data models.</p>
+                <h3>Azure Architecture</h3>
+                <p>Setting up your cloud storage, data factories, and analytical environments the right way.</p>
             </div>
         </div>
     </section>
 
-    <!-- 4. CONTACT INFORMATION SECTION -->
+    <!-- 4. CONTACT SECTION -->
     <section>
-        <h2>Contact Information</h2>
+        <h2>Contacting the Data Consigliere</h2>
         <div class="contact-box">
-            <p>I am available for freelance projects, technical consultation, and cloud data engineering contracts.</p>
+            <p>Ready to bring order to your raw data? Send a message to arrange a meeting.</p>
             <div class="contact-links">
-                <a href="mailto:antoniousadle15@gmail.com" class="contact-link">📧 antoniousadle15@gmail.com</a>
-                <a href="[Your LinkedIn Profile Link]" target="_blank" class="contact-link">🔗 LinkedIn Profile</a>
-                <a href="[Your GitHub Profile Link]" target="_blank" class="contact-link">💻 GitHub Profile</a>
+                <a href="mailto:antoniousadel15@gmail.com" class="contact-link">Send a Wire (Email)</a>
+                <a href="https://www.linkedin.com/in/antonious-adel-900975264" target="_blank" class="contact-link">LinkedIn</a>
+                <a href="https://github.com/Antonious-Samir" target="_blank" class="contact-link">GitHub</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 AntoniousAdel | Digital Egypt Pioneers Initiative (DEPI) Microsoft Data Engineer</p>
+        <p>© 2026 Antonious Adel Samir | Digital Egypt Pioneers Initiative (DEPI)</p>
+        <p>Microsoft Azure Data Engineer</p>
     </footer>
 </div>
 
