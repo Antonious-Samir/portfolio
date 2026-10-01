@@ -1,4 +1,4 @@
-# [Project Title: e.g., Customer Churn Prediction & Analytics]
+# PORTFOLIO FOR DEPI
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![DEPI](https://img.shields.io/badge/DEPI-Data%20Science%20Track-green)
