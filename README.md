@@ -1,30 +1,52 @@
-# PORTFOLIO FOR DEPI
+# 🚀 Data Science & AI Portfolio | Antonious Adel
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![DEPI](https://img.shields.io/badge/DEPI-Data%20Science%20Track-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+Welcome to my portfolio! This repository serves as a centralized hub documenting my journey through the **Digital Egypt Pioneers Initiative (DEPI)** in the **Data Science & Artificial Intelligence** track, alongside my hands-on practice in Python programming and machine learning.
 
-## 📌 Project Overview
-This project was developed as part of the **Digital Egypt Pioneers Initiative (DEPI)** - Data Science and AI Track. 
+---
 
-The primary goal is to analyze [mention dataset/domain, e.g., telecommunications customer data] to identify key trends, clean and preprocess raw data, and build machine learning models to [state objective, e.g., predict customer churn with high precision].
+## 📌 About Me
+I am a Digital Design and Systems Engineer expanding into Data Science and AI. Through the DEPI scholarship program, I apply statistical analysis, data wrangling, and predictive modeling to solve complex engineering and real-world problems.
 
-## 🛠️️ Tech Stack & Tools
-* **Language:** Python
-* **Data Wrangling & Analysis:** Pandas, NumPy
-* **Visualization:** Matplotlib, Seaborn
-* **Machine Learning:** Scikit-Learn, XGBoost
-* **Database & Querying:** SQL
-* **Environment:** Jupyter Notebook / VS Code
-* **Version Control:** Git & GitHub
+* **Program:** Digital Egypt Pioneers Initiative (DEPI)
+* **Track:** Data Science & AI
+* **Primary Stack:** Python, SQL, Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, Git/GitHub
 
-## 📁 Repository Structure
+---
+
+## 🐍 Python Learning Journey
+Before building complex ML pipelines, I established a solid foundation in Python programming, software structure, and algorithm development. 
+
+* **Fundamentals:** Control flow, functions, modular scripting, and OOP.
+* **Data Structures & Problem Solving:** Working with lists, dictionaries, tuples, sets, and file I/O operations.
+* **Code Quality:** Documenting clean code, repository management, and environment setup in VS Code.
+
+---
+
+## 📊 DEPI Data Science & AI Track Projects
+
+Here are the key projects, assignments, and case studies developed during the DEPI track:
+
+### 1. Exploratory Data Analysis & Data Cleaning
+* **Focus:** Data wrangling, handling missing values, outlier detection, and statistical visualizations.
+* **Tools Used:** `Pandas`, `NumPy`, `Matplotlib`, `Seaborn`
+* **Key Deliverables:** Cleaned raw datasets and generated insights through correlation matrices and feature distributions.
+
+### 2. Relational Databases & SQL Analytics
+* **Focus:** Querying structured databases, aggregation functions, complex joins, and subqueries for data extraction.
+* **Tools Used:** `SQL`, `PostgreSQL` / `SQLite`
+
+### 3. Machine Learning & Predictive Modeling
+* **Focus:** Supervised and unsupervised learning techniques, model training, and evaluation metrics (Accuracy, Precision, Recall, ROC-AUC).
+* **Tools Used:** `Scikit-Learn`, `XGBoost`
+* **Algorithms Applied:** Regression, Decision Trees, Random Forests, K-Means Clustering.
+
+---
+
+## 📁 Portfolio Structure
+
 ```text
-├── data/                  # Raw and processed datasets (or instructions to download)
-├── notebooks/             # Step-by-step Jupyter Notebooks
-│   ├── 01_eda.ipynb       # Exploratory Data Analysis & Cleaning
-│   └── 02_modeling.ipynb  # Feature Engineering & ML Models
-├── src/                   # Python scripts for reusable functions
-├── models/                # Saved model artifacts (.pkl files)
-├── README.md              # Project documentation
-└── requirements.txt       # Dependencies
+├── 01_python_basics/       # Practice scripts and fundamental exercises
+├── 02_eda_projects/        # Exploratory Data Analysis notebooks & visual reports
+├── 03_sql_queries/         # Database schemas and analytical SQL scripts
+├── 04_ml_models/           # Machine Learning notebooks, datasets, and saved models
+└── README.md               # Portfolio overview & DEPI task submission
